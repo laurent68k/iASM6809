@@ -2,6 +2,9 @@
  *      machine independent definitions and global variables
  */
 
+#ifndef     AS_H
+#define     AS_H   AS_H
+
 typedef int bool;
 
 #define YES     1
@@ -143,3 +146,6 @@ char    Lst_name[MAXPATH] = "             ";
 char    Sym_name[MAXPATH] = "             ";
 char    Crf_name[MAXPATH] = "             ";
 char	Hexa_name[MAXPATH] = "             ";
+
+#endif
+

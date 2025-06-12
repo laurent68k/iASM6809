@@ -3,16 +3,12 @@
 		
  */
 
-char mapdn();
-char *alloc();
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
 
-extern void localinit();
-extern void do_op(opcode,class);
-extern void do_indexed(op);
-extern void abd_index(pbyte);
-extern void f_record();
-extern void print_line();
-extern void do_gen(op,mode);
+#include "func.h"
 
 /*
  *      as ---  cross assembler main program
@@ -28,15 +24,17 @@ int main6809(int argc, char **argv)
         FILE    *fopen();
         int     j = 0;
 
-		fprintf(stdout, "i6809 Assembler, updated by Favard Laurent for OSX/Xcode\n");
+		fprintf(stdout, "i6809asm a 6809Assembler. Updated by Favard Laurent for macOS (Xcode)\n");
+        fprintf(stdout, "2012-2025\n");
+
         if(argc < 2) {
-                printf("Usage: [files] -opt1 -opt2 ...\n",argv[j]);
+                printf("Usage: [files] -opt1 -opt2 ...\n"/*,argv[j]*/);
 				printf("\n");
 				printf("Where -opt can be:\n");
 				printf("-l	  listing output\n");
 				printf("-bin  binary output\n");
 				printf("-hxt  Hexa.text output\n");
-				exit(1);
+            exit(1);
         }
         
 		Argv = argv;
@@ -141,7 +139,7 @@ int main6809(int argc, char **argv)
         exit(Err_count);
 }
 
-initialize()
+void initialize()
 {
         FILE    *fopen();
         int     i = 0;
@@ -188,7 +186,7 @@ initialize()
         localinit();    /* target machine specific init. */
 }
 
-re_init()
+void re_init()
 {
 #ifdef DEBUG
         printf("Reinitializing\n");
@@ -202,7 +200,7 @@ re_init()
         fwdreinit();
 }
 
-open_files()
+void open_files()
 {
         if(Oflag){
           strcat(Obj_name,".s19");  /* append .s19 to object file name. */
@@ -241,7 +239,7 @@ open_files()
         }
 }
 
-make_pass()
+void make_pass()
 {
         char *pc;
 
@@ -267,7 +265,7 @@ make_pass()
 /*
  *      parse_line --- split input line into label, op and operand
  */
-parse_line()
+int parse_line()
 {
         register char *pcfrm = Line;
         register char *pcto;
@@ -311,7 +309,8 @@ parse_line()
 /*
  *      process --- determine mnemonic class and act on it
  */
-process()
+
+void process()
 {
         register struct oper *i;
         struct oper *mne_look();

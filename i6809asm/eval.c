@@ -35,7 +35,13 @@
  *      ascii constant ::= ''' any printing char;
  *
  */
-eval()
+
+#include <stdio.h>
+#include <stdlib.h>
+
+#include "func.h"
+
+int eval()
 {
         int     left,right;     /* left and right terms for expression */
         char    o;              /* operator character */
@@ -81,8 +87,7 @@ eval()
 /*
  *      is_op --- is character an expression operator?
  */
-is_op(c)
-char c;
+int is_op(char c)
 {
         if( any(c,"+-*/&%|^"))
                 return(YES);
@@ -93,7 +98,7 @@ char c;
 /*
  *      get_term --- evaluate a single item in an expression
  */
-get_term()
+int get_term()
 {
         char    hold[MAXBUF];
         char    *tmp;
