@@ -6,6 +6,10 @@
 #include <fcntl.h>
 #include <unistd.h>
 
+#include "as.h"
+#include "refvars.h"
+#include "func.h"
+
 /*
  *      file I/O version of forward ref handler
  */

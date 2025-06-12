@@ -6,6 +6,9 @@
 //  Copyright © 2025 Laurent. All rights reserved.
 //
 
+#ifndef     __GLOABAL_FUNC__
+#define     __GLOABAL_FUNC__    __GLOABAL_FUNC__
+
 int main6809(int argc, char **argv);
 
 void initialize();
@@ -103,4 +106,5 @@ struct oper *mne_look(char *str);
  */
 void do_pseudo(int op);
 
+#endif
 

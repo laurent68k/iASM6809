@@ -39,7 +39,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#include "as.h"
 #include "func.h"
+#include "refvars.h"
 
 int eval()
 {

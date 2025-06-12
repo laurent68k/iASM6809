@@ -1,3 +1,13 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#include "as.h"
+#include "refvars.h"
+#include "directives.h"
+
+#include "func.h"
+
 /*
  *      install --- add a symbol to the table
  */
@@ -93,8 +103,9 @@ struct nlist *lookup(char *name)
 }
 
 
-#define NMNE (sizeof(table)/ sizeof(struct oper))
-#define NPSE (sizeof(pseudo)/ sizeof(struct oper))
+//#define NMNE (sizeof(table)/ sizeof(struct oper))
+//#define NPSE (sizeof(pseudo)/ sizeof(struct oper))
+
 /*
  *      mne_look --- mnemonic lookup
  *
@@ -109,7 +120,7 @@ struct oper *mne_look(char *str)
 
         /* Search machine mnemonics first */
         low =  &table[0];
-        high = &table[ NMNE-1 ];
+        high = &table[ NMNE_SIZE-1 ];
         while (low <= high){
                 mid = low + (high-low)/2;
                 if( ( cond = strcmp(str,mid->mnemonic)) < 0)
@@ -126,7 +137,7 @@ struct oper *mne_look(char *str)
 
         /* Check for pseudo ops */
         low =  &pseudo[0];
-        high = &pseudo[ NPSE-1 ];
+        high = &pseudo[ NPSE_SIZE-1 ];
         while (low <= high){
                 mid = low + (high-low)/2;
                 if( ( cond = strcmp(str,mid->mnemonic)) < 0)

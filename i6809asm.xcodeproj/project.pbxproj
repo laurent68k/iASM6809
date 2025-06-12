@@ -10,6 +10,13 @@
 		4DB9578416450B82009A51FF /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9578316450B82009A51FF /* main.c */; };
 		4DB9578616450B82009A51FF /* i6809asm.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4DB9578516450B82009A51FF /* i6809asm.1 */; };
 		4DB9579116450C08009A51FF /* as9n.c in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9579016450C08009A51FF /* as9n.c */; };
+		4DF8CC492DFB2FDA006889A1 /* do9.c in Sources */ = {isa = PBXBuildFile; fileRef = 4DF8CC482DFB2FDA006889A1 /* do9.c */; };
+		4DF8CC4C2DFB33CE006889A1 /* pseudo.c in Sources */ = {isa = PBXBuildFile; fileRef = 4DF8CC4B2DFB33CE006889A1 /* pseudo.c */; };
+		4DF8CC4F2DFB36C9006889A1 /* eval.c in Sources */ = {isa = PBXBuildFile; fileRef = 4DF8CC4E2DFB36C9006889A1 /* eval.c */; };
+		4DF8CC512DFB379A006889A1 /* symtab.c in Sources */ = {isa = PBXBuildFile; fileRef = 4DF8CC502DFB379A006889A1 /* symtab.c */; };
+		4DF8CC542DFB4031006889A1 /* util.c in Sources */ = {isa = PBXBuildFile; fileRef = 4DF8CC532DFB4031006889A1 /* util.c */; };
+		4DF8CC562DFB4199006889A1 /* ffwd.c in Sources */ = {isa = PBXBuildFile; fileRef = 4DF8CC552DFB4199006889A1 /* ffwd.c */; };
+		4DF8CC582DFB41D3006889A1 /* output.c in Sources */ = {isa = PBXBuildFile; fileRef = 4DF8CC572DFB41D3006889A1 /* output.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,8 +38,17 @@
 		4DB9578316450B82009A51FF /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		4DB9578516450B82009A51FF /* i6809asm.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = i6809asm.1; sourceTree = "<group>"; };
 		4DB9578C16450BEA009A51FF /* as.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = as.h; sourceTree = "<group>"; };
-		4DB9578E16450BEA009A51FF /* table9.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = table9.h; sourceTree = "<group>"; };
 		4DB9579016450C08009A51FF /* as9n.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = as9n.c; sourceTree = "<group>"; };
+		4DF8CC472DFB2F16006889A1 /* mc6809.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mc6809.h; sourceTree = "<group>"; };
+		4DF8CC482DFB2FDA006889A1 /* do9.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = do9.c; sourceTree = "<group>"; };
+		4DF8CC4A2DFB338F006889A1 /* directives.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = directives.h; sourceTree = "<group>"; };
+		4DF8CC4B2DFB33CE006889A1 /* pseudo.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pseudo.c; sourceTree = "<group>"; };
+		4DF8CC4D2DFB3404006889A1 /* refvars.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = refvars.h; sourceTree = "<group>"; };
+		4DF8CC4E2DFB36C9006889A1 /* eval.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = eval.c; sourceTree = "<group>"; };
+		4DF8CC502DFB379A006889A1 /* symtab.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = symtab.c; sourceTree = "<group>"; };
+		4DF8CC532DFB4031006889A1 /* util.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = util.c; sourceTree = "<group>"; };
+		4DF8CC552DFB4199006889A1 /* ffwd.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ffwd.c; sourceTree = "<group>"; };
+		4DF8CC572DFB41D3006889A1 /* output.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = output.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,10 +81,19 @@
 		4DB9578216450B82009A51FF /* i6809asm */ = {
 			isa = PBXGroup;
 			children = (
+				4DF8CC572DFB41D3006889A1 /* output.c */,
+				4DF8CC552DFB4199006889A1 /* ffwd.c */,
+				4DF8CC532DFB4031006889A1 /* util.c */,
+				4DF8CC502DFB379A006889A1 /* symtab.c */,
+				4DF8CC4E2DFB36C9006889A1 /* eval.c */,
+				4DF8CC4D2DFB3404006889A1 /* refvars.h */,
+				4DF8CC4B2DFB33CE006889A1 /* pseudo.c */,
+				4DF8CC4A2DFB338F006889A1 /* directives.h */,
+				4DF8CC482DFB2FDA006889A1 /* do9.c */,
+				4DF8CC472DFB2F16006889A1 /* mc6809.h */,
 				4D65B09E2DF0B567008C8ED0 /* func.h */,
 				4DB9579016450C08009A51FF /* as9n.c */,
 				4DB9578C16450BEA009A51FF /* as.h */,
-				4DB9578E16450BEA009A51FF /* table9.h */,
 				4DB9578316450B82009A51FF /* main.c */,
 				4DB9578516450B82009A51FF /* i6809asm.1 */,
 			);
@@ -127,7 +152,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DF8CC4F2DFB36C9006889A1 /* eval.c in Sources */,
+				4DF8CC512DFB379A006889A1 /* symtab.c in Sources */,
+				4DF8CC542DFB4031006889A1 /* util.c in Sources */,
+				4DF8CC582DFB41D3006889A1 /* output.c in Sources */,
+				4DF8CC492DFB2FDA006889A1 /* do9.c in Sources */,
+				4DF8CC4C2DFB33CE006889A1 /* pseudo.c in Sources */,
 				4DB9578416450B82009A51FF /* main.c in Sources */,
+				4DF8CC562DFB4199006889A1 /* ffwd.c in Sources */,
 				4DB9579116450C08009A51FF /* as9n.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

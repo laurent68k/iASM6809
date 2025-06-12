@@ -1,3 +1,12 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#include "as.h"
+#include "refvars.h"
+#include "func.h"
+
+
 /*
  *      fatal --- fatal error handler
  */

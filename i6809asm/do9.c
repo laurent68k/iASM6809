@@ -1,37 +1,50 @@
 #include "func.h"
+#include "as.h"
+#include "mc6809.h"
+#include "refvars.h"
 
-/*
- *      MC6809 specific processing
- */
+// /*
+//  *      MC6809 specific processing
+//  */
 
-#define PAGE2   0x10
-#define PAGE3   0x11
-#define IPBYTE  0x9F    /* extended indirect postbyte */
-#define SWI     0x3F
+// #define PAGE2   0x10
+// #define PAGE3   0x11
+// #define IPBYTE  0x9F    /* extended indirect postbyte */
+// #define SWI     0x3F
 
-/* register names */
+// /* register names */
 
-#define RD      0
-#define RX      1
-#define RY      2
-#define RU      3
-#define RS      4
-#define RPC     5
-#define RA      8
-#define RB      9
-#define RCC     10
-#define RDP     11
-#define RPCR    12
+// #define RD      0
+// #define RX      1
+// #define RY      2
+// #define RU      3
+// #define RS      4
+// #define RPC     5
+// #define RA      8
+// #define RB      9
+// #define RCC     10
+// #define RDP     11
+// #define RPCR    12
 
-/* convert tfr/exg reg number into psh/pul format */
+// /* convert tfr/exg reg number into psh/pul format */
 int     regs[] = { 6,16,32,64,64,128,0,0,2,4,1,8,0};
 int     rcycl[]= { 2,2, 2, 2, 2, 2,  0,0,1,1,1,1,0};
 
-/* addressing modes */
-#define IMMED   0       /* immediate */
-#define IND     1       /* indexed */
-#define INDIR   2       /* indirect */
-#define OTHER   3       /* NOTA */
+// /* addressing modes */
+// #define IMMED   0       /* immediate */
+// #define IND     1       /* indexed */
+// #define INDIR   2       /* indirect */
+// #define OTHER   3       /* NOTA */
+
+extern char    *Optr;
+extern int     Result;
+extern int     Pc;
+extern char    Operand[MAXBUF];
+extern int     Pass;
+extern int     Cycles;
+extern int     Force_word;
+extern int     Force_byte;
+
 
 /*
  *      localinit --- machine specific initialization

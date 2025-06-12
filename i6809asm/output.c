@@ -1,3 +1,12 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+
+#include "as.h"
+#include "func.h"
+#include "refvars.h"
+
 /*
  *  stable --- prints the symbol table in alphabetical order
  */

@@ -11,10 +11,11 @@
 #include "func.h"
 
 /**
- Entry point for Xcode
+ * Entry point for Xcode
  */
+
 int main(int argc, const char * argv[])
 {
-    return main6809(argc, argv);
+    return main6809(argc, (char **)argv);
 }
 
