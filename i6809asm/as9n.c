@@ -266,12 +266,16 @@ int main6809(int argc, char **argv)
         fprintf(stdout, "2012-2025\n");
 
         if(argc < 2) {
-                printf("Usage: [files] -opt1 -opt2 ...\n"/*,argv[j]*/);
-                printf("\n");
-                printf("Where -opt can be:\n");
-                printf("-l    listing output\n");
-                printf("-bin  binary output\n");
-                printf("-hxt  Hexa.text output\n");
+            printf("Usage: [files] -opt1 -opt2 ...\n"/*,argv[j]*/);
+            printf("\n");
+            printf("Where -opt can be:\n");
+            printf("-l    listing output\n");
+            printf("-bin  binary output\n");
+            printf("-hxt  Hexa.text output\n");
+            
+            printf("\n\nExample :\n");
+            printf("./i6809asm /Users/laurent/Documents/Dev/RedBoard-2/EKMonitor16KB/EK6809Monitor.asm -bin -hxt -l\n");
+            
             exit(1);
         }
         
@@ -291,15 +295,15 @@ int main6809(int argc, char **argv)
             printf( "%s\n", pc);
 
              if (strcmp(argv[j],"l")==0 || strcmp(argv[j],"-l")==0) {
-                fprintf(stdout, "with listing output\n");
+                fprintf(stdout, "with listing output");
                Lflag = 1;
              }
              else if (strcmp(argv[j],"h")==0 || strcmp(argv[j],"-hxt")==0) {
-                fprintf(stdout, "with hexadecimal text output\n");
-               HXTflag = 1;
+                fprintf(stdout, "with hexadecimal text output");
+                 HXTflag = 1;
              }
              else if (strcmp(argv[j],"nol")==0 || strcmp(argv[j],"-nol")==0 ) {
-               Lflag = 0;
+                 Lflag = 0;
              }
              else if (strcmp(argv[j],"c")==0)
                Cflag = 1;

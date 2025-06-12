@@ -81,23 +81,47 @@
 		4DB9578216450B82009A51FF /* i6809asm */ = {
 			isa = PBXGroup;
 			children = (
+				4DF8CC5B2DFB45DD006889A1 /* man */,
+				4DF8CC5A2DFB45C9006889A1 /* src */,
+				4DF8CC592DFB45BE006889A1 /* includes */,
+				4DB9579016450C08009A51FF /* as9n.c */,
+				4DB9578316450B82009A51FF /* main.c */,
+			);
+			path = i6809asm;
+			sourceTree = "<group>";
+		};
+		4DF8CC592DFB45BE006889A1 /* includes */ = {
+			isa = PBXGroup;
+			children = (
+				4DF8CC4D2DFB3404006889A1 /* refvars.h */,
+				4DF8CC4A2DFB338F006889A1 /* directives.h */,
+				4DF8CC472DFB2F16006889A1 /* mc6809.h */,
+				4D65B09E2DF0B567008C8ED0 /* func.h */,
+				4DB9578C16450BEA009A51FF /* as.h */,
+			);
+			path = includes;
+			sourceTree = "<group>";
+		};
+		4DF8CC5A2DFB45C9006889A1 /* src */ = {
+			isa = PBXGroup;
+			children = (
 				4DF8CC572DFB41D3006889A1 /* output.c */,
 				4DF8CC552DFB4199006889A1 /* ffwd.c */,
 				4DF8CC532DFB4031006889A1 /* util.c */,
 				4DF8CC502DFB379A006889A1 /* symtab.c */,
 				4DF8CC4E2DFB36C9006889A1 /* eval.c */,
-				4DF8CC4D2DFB3404006889A1 /* refvars.h */,
 				4DF8CC4B2DFB33CE006889A1 /* pseudo.c */,
-				4DF8CC4A2DFB338F006889A1 /* directives.h */,
 				4DF8CC482DFB2FDA006889A1 /* do9.c */,
-				4DF8CC472DFB2F16006889A1 /* mc6809.h */,
-				4D65B09E2DF0B567008C8ED0 /* func.h */,
-				4DB9579016450C08009A51FF /* as9n.c */,
-				4DB9578C16450BEA009A51FF /* as.h */,
-				4DB9578316450B82009A51FF /* main.c */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		4DF8CC5B2DFB45DD006889A1 /* man */ = {
+			isa = PBXGroup;
+			children = (
 				4DB9578516450B82009A51FF /* i6809asm.1 */,
 			);
-			path = i6809asm;
+			path = man;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
